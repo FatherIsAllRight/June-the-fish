@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 28b9fce19cabb42918b0397c3f161e36
+timeCreated: 1531830243
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: FZHuaLi-M14
+  fontNames:
+  - FZHuaLi-M14
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
