@@ -70,4 +70,19 @@ public class NextScene : MonoBehaviour {
         nextSceneID = sceneID;
         maskStatus = MaskStatus.SceneEnd;
     }
+
+    public void GameOver(int sceneID)
+    {
+        Color color = new Color(0,0,0,0);
+        //color.a = color.a - 0.01f;
+        spriteRenderer.color = color;
+        changeScene(sceneID);
+    }
+
+    public void SetMaskColor(Color c)
+    {
+        spriteRenderer.color = c;
+    }
+
+
 }

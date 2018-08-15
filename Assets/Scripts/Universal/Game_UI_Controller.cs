@@ -24,7 +24,7 @@ public class Game_UI_Controller : MonoBehaviour {
         }
         myWindScore = 1;
         myScoreText.text = myWindScore.ToString();
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
 	// Use this for initialization
@@ -34,7 +34,10 @@ public class Game_UI_Controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        if (Game_UI_Controller.Instance.GetScore() == 2)
+        {
+            NextScene.Instance.changeScene(0);
+        }
 	}
 
     public void GetLittleWind(int num)

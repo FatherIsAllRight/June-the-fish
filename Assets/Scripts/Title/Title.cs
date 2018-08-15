@@ -15,11 +15,16 @@ public class Title : MonoBehaviour {
     [SerializeField] NextScene MaskNextScene;
     [SerializeField] Animator SpriteAnimator;
     [SerializeField] Transform SpriteTransform;
+    public GameObject BackgroundMusic;
     private SpriteStatus spriteStatus;
 
     // Use this for initialization
     void Start () {
         spriteStatus = SpriteStatus.SpriteFlyIn;
+        if (FindObjectOfType(typeof(AudioSource)) == null)
+        {
+            Instantiate(BackgroundMusic);
+        }
     }
 	
 	// Update is called once per frame
@@ -30,7 +35,6 @@ public class Title : MonoBehaviour {
             if(spriteStatus == SpriteStatus.SpriteFlyIn)
             {
                 SpriteAnimator.SetInteger("SpriteState", 1);
-                Debug.Log(SpriteAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime);
                 if (SpriteAnimator.GetCurrentAnimatorStateInfo(0).IsName("TitleSpriteIn") && SpriteAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
                 {
                     spriteStatus = SpriteStatus.Waiting;
@@ -47,7 +51,6 @@ public class Title : MonoBehaviour {
             else if (spriteStatus == SpriteStatus.SpriteFlyOut)
             {
                 SpriteAnimator.SetInteger("SpriteState", 2);
-                Debug.Log(SpriteAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime);
                 if (SpriteAnimator.GetCurrentAnimatorStateInfo(0).IsName("TitleSpriteOut") && SpriteAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
                 {
                     spriteStatus = SpriteStatus.NextScene;

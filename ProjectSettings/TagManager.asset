@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - LittleWind
+  - AirWall
+  - StandCloud
+  - WhiteWind
+  - BlackWind
+  - Feather
+  - Zues
+  - InteractiveStone
   layers:
   - Default
   - TransparentFX
@@ -16,7 +23,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Player
   - 
   - 
   - 
@@ -39,6 +46,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: UpLayer
+    uniqueID: 1330187043
+    locked: 0
+  - name: FogLayer
+    uniqueID: 4143214939
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UILayer
+    uniqueID: 1327195525
     locked: 0
